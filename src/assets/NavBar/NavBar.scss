@@ -1,0 +1,36 @@
+*, *:after, *:before{
+    margin: 0;
+    content: '';
+    box-sizing: content-box;
+}
+
+nav{
+    padding: 1em 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fce043;
+background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    img{
+        width: 8em;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            list-style: none;
+            justify-content: space-between;
+            padding: 0 1em;
+            transition: all .2s linear;
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+        li:hover{
+            transform: translateY(-.25em);
+            color: whitesmoke;
+        }
+    }
+}
