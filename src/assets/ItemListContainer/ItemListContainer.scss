@@ -1,0 +1,15 @@
+main{
+    min-height: 80vh;
+    padding: 1em 2em;
+    background-color: #e5e5f7;
+    background-image:  linear-gradient(rgb(69, 69, 69, 0.25) 1px, transparent 1px), linear-gradient(to right, rgb(69, 69, 69, 0.25) 1px, #e5e5f7 1px);
+    background-size: 20px 20px;
+    section{
+        article{
+            margin: 1em 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+    }
+}

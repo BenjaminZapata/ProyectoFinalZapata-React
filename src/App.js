@@ -1,10 +1,14 @@
 import './App.css';
 import NavBar from './assets/NavBar/NavBar';
+import ItemListContainer from "./assets/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
-    <NavBar />
+    <>
+      <NavBar />
+      <ItemListContainer />
+    </>
   );
 }
 
-export default App;
+export default App

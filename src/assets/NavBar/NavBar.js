@@ -1,17 +1,18 @@
 import './NavBar.css';
-import logo from "./logo.png";
+import CartWidget from './CartWidget';
 
 function NavBar() {
     return (
         <nav>
-            <img src={logo} alt="" />
+            <img className="logo" src="/assets/img/logo.png"></img>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Info</a></li>
-                <li><a href="#">Tienda</a></li>
+                <li><button>Info</button></li>
+                <li><button>Home</button></li>
+                <li><button>Tienda</button></li>
+                <li><button><CartWidget /></button></li>
             </ul>
         </nav>
     )
 }
 
-export default NavBar;
+export default NavBar
