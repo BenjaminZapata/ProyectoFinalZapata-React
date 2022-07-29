@@ -1,30 +1,42 @@
+import { useEffect, useState } from "react"
 import './ItemListContainer.css';
-import ProductCards from './ProductCards';
+import ItemList from "./ItemList";
+import products from "../../utils/products.mock"
 
 const ItemListContainer = () =>{
-    const product1 = {
-        title: "Lapiz Filgo Color x12",
-        image: "./assets/img/products/LapizFilgoColor24.jpg",
-        price: 800,
-        id: 1
-    }
-    const product2 = {
-        title: "Lapiz Bicolor Faber Castell x24",
-        image: "./assets/img/products/LapizBicolorFaber24.jpg",
-        price: 1700,
-        id: 2
-    }
+
+    const [listProducts, setListProducts] = useState([])
+
+    const getProducts = new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            resolve(products)
+        }, 2000)
+    })
+
+    useEffect(() => {
+        getProducts
+            .then( (res) => { // OK
+                setListProducts(res)
+                console.log("Respuesta recibida")
+                console.log(res)
+            })
+            .catch( (err) => { // ERROR
+                console.log("ERROR: fallo la llamada")
+            })
+            .finally( () => { // Final de la llamada, indiferente del resultado
+            })
+    }, [])
+
     return (
         <main>
             <section>
                 <h3>Productos</h3>
                 <article>
-                    <ProductCards data={product1} />
-                    <ProductCards data={product2} />
+                    <ItemList data={listProducts} />
                 </article>
             </section>
         </main>
     )
 }
 
-export default ItemListContainer;
+export default ItemListContainer
