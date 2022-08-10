@@ -1,0 +1,50 @@
+main {
+  background-color: #e9ecef;
+  padding: 1em 0 3em 0;
+}
+main header {
+  display: flex;
+}
+main header aside {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding: 6em 2em;
+  width: 50%;
+  gap: 2em;
+}
+main header aside h1 {
+  text-transform: uppercase;
+}
+main header aside p {
+  max-width: 55ch;
+  line-height: 1.5;
+}
+main header aside button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #212529;
+  border: none;
+  text-transform: uppercase;
+  background-color: #e9ecef;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+  padding: 0.2em 0;
+  transition: 0.25s all linear;
+}
+main header aside button:hover {
+  background-color: #212529;
+  color: #f8f9fa;
+  text-decoration: none;
+}
+main header picture {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main header picture img {
+  width: 75%;
+}/*# sourceMappingURL=Home.css.map */

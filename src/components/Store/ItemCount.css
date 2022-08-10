@@ -1,0 +1,53 @@
+path {
+  color: white;
+}
+
+.item__count {
+  display: flex;
+  padding: 0.25em 0.5em;
+  margin: 0.25em 0 0.5em 1em;
+  align-items: center;
+  gap: 1.75em;
+  width: 100%;
+}
+.item__count .item__count__button {
+  padding: 0.25em 0.5em;
+  color: #f8f9fa;
+  border: none;
+  background-color: #0f1112;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.55em 1em;
+  box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 1px;
+  transition: 0.075s all linear;
+}
+.item__count .item__count__button span {
+  font-size: 1.25em;
+  color: #f8f9fa;
+}
+.item__count .item__count__button:active {
+  transform: translate(4px, 4px);
+  box-shadow: #fff 0px 0px 0 0, #000 0.5px 0.5px 0 1px;
+}
+.item__count .item__count__display {
+  font-size: 2em;
+}
+.item__count .item__count__button--disabled {
+  color: #0f1112;
+  background-color: #f8f9fa;
+  padding: 0.25em 0.5em;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.55em 1em;
+  border: 1px solid black;
+  box-shadow: #000 3px 3px 0 0, #000 3px 3px 0 1px;
+}/*# sourceMappingURL=ItemCount.css.map */

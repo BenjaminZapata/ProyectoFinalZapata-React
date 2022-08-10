@@ -1,50 +1,49 @@
-*, *:after, *:before {
-  margin: 0;
-  content: "";
-  box-sizing: content-box;
+li:last-child {
+  padding: 0.1em 0 0.5em 0;
+}
+li:last-child path {
+  color: black;
 }
 
 nav {
-  display: flex;
-  position: static;
   width: 100%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #fce043;
-  background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+  background-color: #f8f9fa;
+  color: #212529;
 }
 nav header {
-  margin: 1.5em 0 0.5em 0;
+  padding: 2em 0 0.5em 0;
 }
-nav header .logo {
-  width: 12em;
-}
-nav footer {
-  padding: 1em 0;
+nav header a {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
 }
+nav header a img {
+  width: 32.5%;
+}
 nav footer ul {
+  padding-top: 0.75em;
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
+  border-bottom: 1px solid rgb(236, 239, 240);
+  text-align: center;
 }
 nav footer ul li {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.15em;
   list-style: none;
-  justify-content: space-between;
-  padding: 0 1em;
-  transition: all 0.125s linear;
+  font-weight: 700;
+  transition: 0.1s all linear;
+  padding: 0.1em 0 1em 0;
+  border-bottom: 3px solid transparent;
+  width: 6%;
 }
-nav footer ul li button {
-  border: none;
-  background: none;
+nav footer ul li a {
   color: inherit;
-  font-weight: bolder;
+  text-decoration: none;
 }
-nav footer ul li:hover:not(:last-child) {
-  transform: translateY(-0.2em);
-  color: whitesmoke;
+nav footer ul li:hover {
+  border-bottom: 3px solid #212529;
+  width: 6%;
 }/*# sourceMappingURL=NavBar.css.map */

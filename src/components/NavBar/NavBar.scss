@@ -1,49 +1,50 @@
-*, *:after, *:before{
-    margin: 0;
-    content: '';
-    box-sizing: content-box;
+li:last-child{
+    padding: .1em 0 .5em 0;
+    path{
+        color: black;
+    }
 }
 
 nav{
-    display: flex;
-    position: static;
     width: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #fce043;
-    background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    background-color: #f8f9fa;
+    color: #212529;
     header{
-        margin: 1.5em 0 .5em 0;
-        .logo{
-            width: 12em;
+        padding: 2em 0 .5em 0;
+        a{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 32.5%;
+            }
         }
     }
     footer{
-        padding: 1em 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
         ul{
+            padding-top: .75em; 
             display: flex;
-            flex-direction: row;
+            justify-content: space-evenly;
             align-items: center;
+            border-bottom: 1px solid rgb(236, 239, 240);
+            text-align: center;
             li{
+                text-transform: uppercase;
+                font-size: .8em;
+                letter-spacing: .15em;
                 list-style: none;
-                justify-content: space-between;
-                padding: 0 1em;
-                transition: all .125s linear;
-                button{
-                    border: none;
-                    background: none;
+                font-weight: 700;
+                transition: .1s all linear;
+                padding: .1em 0 1em 0;
+                border-bottom: 3px solid transparent;
+                width: 6%;
+                a{
                     color: inherit;
-                    font-weight: bolder;
+                    text-decoration: none;
                 }
             }
-            li:hover:not(:last-child){
-                transform: translateY(-.2em);
-                color: whitesmoke;
+            li:hover{
+                border-bottom: 3px solid #212529;
+                width: 6%;
             }
         }
     }

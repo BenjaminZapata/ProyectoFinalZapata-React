@@ -1,0 +1,48 @@
+main{
+    background-color: #e9ecef;
+    padding: 1em 0 3em 0;
+    header{
+        display: flex;
+        aside{
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            padding: 6em 2em;
+            width: 50%;
+            gap: 2em;
+            h1{
+                text-transform: uppercase;
+            }
+            p{
+                max-width: 55ch;
+                line-height: 1.5;
+            }
+            button{
+                width: fit-content;
+                color: #212529;
+                border: none;
+                text-transform: uppercase;
+                background-color: #e9ecef;
+                font-weight: bold;
+                letter-spacing: .1em;
+                text-decoration: underline;
+                padding: .2em 0;
+                transition: .25s all linear;
+            }
+            button:hover{
+                background-color: #212529;
+                color: #f8f9fa;
+                text-decoration: none;
+            }
+        }
+        picture{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 75%;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+#FeaturedItems{
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 2em;
+    gap: 2em;
+    .FeaturedItems__title{
+        text-transform: uppercase;
+        letter-spacing: .15em;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: space-evenly;
+    }
+}

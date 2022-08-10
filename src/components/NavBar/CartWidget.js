@@ -1,9 +1,9 @@
-import './CartWidget.css';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const CartWidget = () => {
-    return(
-        <img src="/assets/img/cart.png"></img>
+function CartWidget () {
+    return (
+        <ShoppingCartIcon/>
     )
 }
 
-export default CartWidget
+export default CartWidget;
