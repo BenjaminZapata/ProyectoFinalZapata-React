@@ -1,3 +1,55 @@
-img {
-  width: 1.25em;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700&display=swap");
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  margin-top: 0.5em;
+}
+
+.item__cart__product {
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.25em 0;
+}
+.item__cart__product img {
+  width: 30%;
+}
+.item__cart__product__details {
+  text-align: center;
+}
+.item__cart__product__details__title {
+  width: 15ch;
+}
+.item__cart__product__details__amount {
+  display: flex;
+  justify-content: center;
+  gap: 0.25em;
+}
+.item__cart__product__details__amount p {
+  font-size: 1.45em;
+}
+.item__cart__product__details__amount__button {
+  border: none;
+  background-color: transparent;
+}
+.item__cart__product__details__amount__button__content {
+  padding-top: 0.25em;
+  width: 0.65em;
+}
+.item__cart__product__delete {
+  padding-top: 0.25em;
+  color: black;
+}
+
+.cartFooter {
+  min-width: 250px;
+  margin: 0.75em 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartFooter__erase {
+  padding: 0.35em 0.75em;
+  font-family: "Barlow", sans-serif;
+  border: 1px solid black;
+  background-color: #f8f9fa;
 }/*# sourceMappingURL=CartWidget.css.map */

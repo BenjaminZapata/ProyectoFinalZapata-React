@@ -1,11 +1,13 @@
 import './ItemCount.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { CartContext } from '../Context/CartContext';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-function ItemCount({setQuantitySelected, stock}) {
-    const [countAmount, setCountAmount] = useState(1)
+function ItemCount({ setQuantitySelected, stock, productData }) {
+    const { addProductToCart } = useContext(CartContext)
+    const [ countAmount, setCountAmount ] = useState(1)
     
     const addQuantity = () => {
         if (countAmount == stock){
@@ -27,14 +29,16 @@ function ItemCount({setQuantitySelected, stock}) {
 
     const onAdd = () =>{
         setQuantitySelected(countAmount)
+        const itemToAdd = {...productData, count: countAmount}
+        addProductToCart(itemToAdd)
     }
 
     return(
         <>
         <div className='item__count'>
-            <button className='item__count__button' onClick={removeQuantity}><RemoveIcon sx={{ fontSize: 15 }} /></button>
+            <button className='item__count__button' onClick={removeQuantity}><RemoveIcon sx={{ fontSize: 15 }} className='white' /></button>
             <span className='item__count__display'>{countAmount}</span>
-            <button className='item__count__button' onClick={addQuantity}><AddIcon sx={{ fontSize: 15 }} /></button>
+            <button className='item__count__button' onClick={addQuantity}><AddIcon sx={{ fontSize: 15 }} className='white' /></button>
         </div>
         <button className='detail__info__button' onClick={onAdd}>Añadir al carrito <ArrowForwardIcon sx={{ fontSize: 20 }} className='white' /></button>
         </>

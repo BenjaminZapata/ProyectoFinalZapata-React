@@ -15,7 +15,6 @@ const ItemDetailContainer = () => {
     const filterById = () => {
         products.some( (product) =>{
             if (product.id == id) {
-                console.log('Producto filtrado: ', product);
                 setProductData(product)
             }
         }

@@ -20,7 +20,7 @@ const ItemDetail = ({data}) => {
                     <p className='detail__info__price'>$ {price}</p>
                     <h3 className='detail__info__colours'>{colours}</h3>
                     {
-                        quantitySelected >= 1 ? <Link to='/checkout'><button className='detail__info__button' >Terminar compra</button></Link>:<ItemCount setQuantitySelected={setQuantitySelected} stock={stock}/>
+                        quantitySelected >= 1 ? <Link to='/checkout'><button className='detail__info__button'>Terminar compra</button></Link>:<ItemCount setQuantitySelected={setQuantitySelected} stock={stock} productData={data}/>
                     }
                 </aside>
             </article>

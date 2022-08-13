@@ -8,7 +8,7 @@ const products = [
         colours: '',
         featured: true,
         category: 'Hombre',
-        subcategory: 'Running'
+        subcategory: 'Running',
     },
     {
         id: 2,
