@@ -51,10 +51,10 @@
             display: flex;
             align-items: center;
             gap: .25em;
-        }
-        .detail__info__button:active{
-            transform: translate(4px, 4px);
-            box-shadow: #fff 0px 0px 0 0,#000 .5px .5px 0 1px;
+            &:active{
+                transform: translate(4px, 4px);
+                box-shadow: #fff 0px 0px 0 0,#000 .5px .5px 0 1px;
+            }
         }
     }
 }

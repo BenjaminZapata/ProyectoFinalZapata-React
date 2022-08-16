@@ -39,20 +39,40 @@ const CartProvider = ({children}) => {
         };
     }
 
-    const increaseOneFromCount = (id) => {
-
+    const totalProductsPriceCheckout = () => {
+        let total = 0;
+        cartProducts.forEach(element => {
+            total += element.price
+        })
+        if (total == 0){
+            return 'No hay productos'
+        }
+        else{
+            return 'Total (' + cartProducts.lenght + ') $' + total
+        };
     }
 
-    const removeOneFromCount = (id) => {
-        /*const index = id + 1
-        const copyCart = cartProducts
-        if (copyCart[index].count == 1){
+    const increaseOneFromCount = (stock, count) => {
+        if (count == stock){
+            return
+        }
+        else{
+            count += 1;
+            console.log(count)
+        }
+        console.log(count + "dasda")
+    }
+
+    const removeOneFromCount = (count, id) => {
+        let copyCart = cartProducts;
+        const index = copyCart.indexOf(id);
+        console.log('Copia:', count)
+        if (count == 1){
             removeFromCart(index)
         }
         else{
-            copyCart[index].count = copyCart[index].count - 1
-            setCartProducts(copyCart)
-        }*/
+            console.log('Agregaste otro')
+        }
     }
 
     const data = {
@@ -63,7 +83,8 @@ const CartProvider = ({children}) => {
         removeFromCart,
         addProductToCart,
         increaseOneFromCount,
-        removeOneFromCount
+        removeOneFromCount,
+        totalProductsPriceCheckout
     }
 
     return(

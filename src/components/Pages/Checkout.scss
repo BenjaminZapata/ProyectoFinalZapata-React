@@ -1,0 +1,124 @@
+p{
+    letter-spacing: .025em;
+}
+
+.checkout{
+    display: flex;
+    margin: 0 3em;
+    gap: 2em;
+    .checkout__main{
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 1em;
+        &__title{
+            font-size: 2.5em;
+        }
+        &__total{
+            span{
+                font-weight: bold;
+                letter-spacing: .05em;
+            }
+        }
+        &__offer{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            width: 90%;
+            align-self: center;
+            margin: 1.5em 0;
+            h2{
+                font-size: 1.125em;
+            }
+        }
+        &__list{
+            &__product{
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid black;
+                img{
+                    width: 30%;
+                }
+                &__info{
+                    &__title{
+                        text-transform: uppercase;
+                        font-size: 1.25em;
+                        padding-top: 1em;
+                        max-width: 20ch;
+                    }
+                }
+                &__price{
+                    padding-top: 1em;
+                    font-size: 1.25em;
+                }
+                &__icon{
+                    margin: .5em;
+                }
+            }
+        }
+        &__buyout__button{
+            align-self: start;
+            color: #f8f9fa;
+            border: none;
+            background-color: #0f1112;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1em;
+            width: fit-content;
+            padding: .75em 1.5em;
+            box-shadow: #fff 3px 3px 0 0,#000 3px 3px 0 1px;
+            transition: .075s all linear;
+            display: flex;
+            align-items: center;
+            gap: .25em;
+            &:active{
+                transform: translate(4px, 4px);
+                box-shadow: #fff 0px 0px 0 0,#000 .5px .5px 0 1px;
+            }
+        }
+    }
+    .checkout__aside{
+        width: 35%;
+        margin-top: 5em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        &__buyout__button{
+            align-self: center;
+            color: #f8f9fa;
+            border: none;
+            background-color: #0f1112;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1em;
+            width: 90%;
+            padding: 1em 1.5em;
+            box-shadow: #fff 3px 3px 0 0,#000 3px 3px 0 1px;
+            transition: .075s all linear;
+            display: flex;
+            align-items: center;
+            gap: .25em;
+            &:active{
+                transform: translate(4px, 4px);
+                box-shadow: #fff 0px 0px 0 0,#000 .5px .5px 0 1px;
+            }
+        }
+        &__resume{
+            margin: 2em 0;
+            width: 80%;
+            align-self: center;
+            h2{
+                font-size: 1.25em;
+            }
+        }
+        input{
+            width: 90%;
+            height: 3.5em;
+            align-self: center;
+            border: 1px solid rgba(54, 54, 54, .5);
+            padding: 0 1em;
+            letter-spacing: .025em;
+        }
+    }
+}

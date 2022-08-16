@@ -37,15 +37,16 @@ function CartWidget () {
         }}
         >
             {cartProducts.map((product) => {
+                const { stock, count, id } = product;
                 return(
                     <div className='item__cart__product' key={product.id}>
                         <img src={product.image} alt={product.title}></img>
                         <div className='item__cart__product__details'>
                             <p className='item__cart__product__details__title'>{product.title}</p>
                             <div className='item__cart__product__details__amount'>
-                                <button onClick={removeOneFromCount()} className='item__cart__product__details__amount__button' ><AddIcon className='item__cart__product__details__amount__button__content' /></button>
+                                <button onClick={(stock, count) => increaseOneFromCount} className='item__cart__product__details__amount__button' ><AddIcon className='item__cart__product__details__amount__button__content' /></button>
                                 <p>{product.count}</p>
-                                <button onClick={() => increaseOneFromCount} className='item__cart__product__details__amount__button'><RemoveIcon className='item__cart__product__details__amount__button__content' /></button>
+                                <button onClick={() => removeOneFromCount(count, id)} className='item__cart__product__details__amount__button'><RemoveIcon className='item__cart__product__details__amount__button__content' /></button>
                             </div>
                         </div>
                         <div className='item__cart__product__details'>
