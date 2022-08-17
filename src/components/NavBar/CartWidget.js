@@ -44,9 +44,9 @@ function CartWidget () {
                         <div className='item__cart__product__details'>
                             <p className='item__cart__product__details__title'>{product.title}</p>
                             <div className='item__cart__product__details__amount'>
-                                <button onClick={(stock, count) => increaseOneFromCount} className='item__cart__product__details__amount__button' ><AddIcon className='item__cart__product__details__amount__button__content' /></button>
+                                <button onClick={() => increaseOneFromCount(product)} className='item__cart__product__details__amount__button' ><AddIcon className='item__cart__product__details__amount__button__content' /></button>
                                 <p>{product.count}</p>
-                                <button onClick={() => removeOneFromCount(count, id)} className='item__cart__product__details__amount__button'><RemoveIcon className='item__cart__product__details__amount__button__content' /></button>
+                                <button onClick={() => removeOneFromCount(product)} className='item__cart__product__details__amount__button'><RemoveIcon className='item__cart__product__details__amount__button__content' /></button>
                             </div>
                         </div>
                         <div className='item__cart__product__details'>

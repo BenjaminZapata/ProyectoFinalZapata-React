@@ -10,7 +10,7 @@ p{
         background-color: #f8f9fa;
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 65%;
         gap: 1em;
         &__title{
             font-size: 2.5em;
@@ -33,19 +33,47 @@ p{
             }
         }
         &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
             &__product{
                 display: flex;
                 justify-content: space-between;
-                border: 1px solid black;
+                border: 1px solid rgba(77, 78, 83, 0.75);
                 img{
                     width: 30%;
                 }
                 &__info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     &__title{
                         text-transform: uppercase;
                         font-size: 1.25em;
                         padding-top: 1em;
                         max-width: 20ch;
+                        &__amount{
+                            display: flex;
+                            flex-direction: row;
+                            border: 1px solid rgba(77, 78, 83, 0.75);
+                            width: 6.5em;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 2.75em;
+                            margin-bottom: 1.5em;
+                            padding: 0 .35em;
+                            p{
+                                padding-bottom: .2em;
+                                font-size: 1.25em;
+                            }
+                            button{
+                                border: none;
+                                background-color: none;
+                                &:active{
+                                    background-color: rgb(66, 66, 66);
+                                }
+                            }
+                        }
                     }
                 }
                 &__price{

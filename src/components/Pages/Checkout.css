@@ -11,7 +11,7 @@ p {
   background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 65%;
   gap: 1em;
 }
 .checkout .checkout__main__title {
@@ -32,19 +32,51 @@ p {
 .checkout .checkout__main__offer h2 {
   font-size: 1.125em;
 }
+.checkout .checkout__main__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
 .checkout .checkout__main__list__product {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 1px solid rgba(77, 78, 83, 0.75);
 }
 .checkout .checkout__main__list__product img {
   width: 30%;
+}
+.checkout .checkout__main__list__product__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .checkout .checkout__main__list__product__info__title {
   text-transform: uppercase;
   font-size: 1.25em;
   padding-top: 1em;
   max-width: 20ch;
+}
+.checkout .checkout__main__list__product__info__title__amount {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(77, 78, 83, 0.75);
+  width: 6.5em;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.75em;
+  margin-bottom: 1.5em;
+  padding: 0 0.35em;
+}
+.checkout .checkout__main__list__product__info__title__amount p {
+  padding-bottom: 0.2em;
+  font-size: 1.25em;
+}
+.checkout .checkout__main__list__product__info__title__amount button {
+  border: none;
+  background-color: none;
+}
+.checkout .checkout__main__list__product__info__title__amount button:active {
+  background-color: rgb(66, 66, 66);
 }
 .checkout .checkout__main__list__product__price {
   padding-top: 1em;
