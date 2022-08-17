@@ -86,6 +86,7 @@ p{
             }
         }
         &__buyout__button{
+            margin-top: 1em;
             align-self: start;
             color: #f8f9fa;
             border: none;
@@ -100,6 +101,9 @@ p{
             display: flex;
             align-items: center;
             gap: .25em;
+            a{
+                color: white;
+            }
             &:active{
                 transform: translate(4px, 4px);
                 box-shadow: #fff 0px 0px 0 0,#000 .5px .5px 0 1px;

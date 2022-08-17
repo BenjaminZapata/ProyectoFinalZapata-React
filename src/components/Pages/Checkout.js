@@ -1,5 +1,6 @@
 import './Checkout.css'
 import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
 import ClearIcon from '@mui/icons-material/Clear';
 import AddIcon from '@mui/icons-material/Add';
@@ -9,7 +10,8 @@ const Checkout = () => {
     const { cartProducts, totalProductsPriceCheckout, clear, removeFromCart, increaseOneFromCount, removeOneFromCount } = useContext(CartContext)
 
 			return <section className='checkout'>
-      <main className='checkout__main'>
+      { cartProducts.length > 0 ? <>
+				<main className='checkout__main'>
           <h1 className='checkout__main__title'>TU CARRITO</h1>
           <p className='checkout__main__total'></p>
           <p>Los artículos en tu carrito no están reservados. Terminá el proceso de compra ahora para hacerte con ellos.</p>
@@ -48,6 +50,19 @@ const Checkout = () => {
           <div className='checkout__aside__payments'>
           </div>
       </aside>
+		</> :
+		<>
+		<main className='checkout__main'>
+          <h1 className='checkout__main__title'>TU CARRITO ESTA VACIO</h1>
+          <p className='checkout__main__total'></p>
+          <p>Una vez que añadas algo a tu carrito, aparecerá acá. ¿Listo para empezar?</p>
+          <button className='checkout__main__buyout__button'><Link to={'/'}>Empezar</Link></button>
+      </main>
+      <aside className='checkout__aside'>
+          <p>OPCIONES DE PAGO</p>
+          <div className='checkout__aside__payments'>
+          </div>
+      </aside></>}
   </section>
 }
 

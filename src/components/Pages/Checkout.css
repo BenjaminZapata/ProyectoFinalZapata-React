@@ -86,6 +86,7 @@ p {
   margin: 0.5em;
 }
 .checkout .checkout__main__buyout__button {
+  margin-top: 1em;
   align-self: start;
   color: #f8f9fa;
   border: none;
@@ -102,6 +103,9 @@ p {
   display: flex;
   align-items: center;
   gap: 0.25em;
+}
+.checkout .checkout__main__buyout__button a {
+  color: white;
 }
 .checkout .checkout__main__buyout__button:active {
   transform: translate(4px, 4px);
