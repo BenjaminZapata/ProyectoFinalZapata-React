@@ -54,16 +54,16 @@ p {
   text-transform: uppercase;
   font-size: 1.25em;
   padding-top: 1em;
-  max-width: 20ch;
+  width: 14ch;
 }
 .checkout .checkout__main__list__product__info__title__amount {
   display: flex;
   flex-direction: row;
   border: 1px solid rgba(77, 78, 83, 0.75);
-  width: 6.5em;
+  width: 6em;
   justify-content: space-between;
   align-items: center;
-  height: 2.75em;
+  height: 2.5em;
   margin-bottom: 1.5em;
   padding: 0 0.35em;
 }

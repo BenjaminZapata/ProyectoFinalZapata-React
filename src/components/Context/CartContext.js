@@ -6,14 +6,20 @@ const CartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState([]);
 
     const addProductToCart = (product) => {
-        const isProductInCart = cartProducts.indexOf(product)
-        if (isProductInCart == -1){
-            setCartProducts(cartProducts => [...cartProducts, product])
+        if (!cartProducts.some(el => el.id == product.id)){
+            setCartProducts([...cartProducts, product])
         }
         else{
-            const copyCart = cartProducts;
-            copyCart[isProductInCart].count = copyCart[isProductInCart].count + product.count;
-            setCartProducts([copyCart])
+            const newCart = cartProducts.map( el => {
+                if (el.id == product.id){
+                    el.count = el.count + product.count;
+                    if(el.count > product.stock){
+                        el.count = product.stock
+                    }
+                }
+                return el;
+            });
+            setCartProducts(newCart);
         }
     }
 
