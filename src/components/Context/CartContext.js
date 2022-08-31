@@ -4,10 +4,12 @@ const CartContext = createContext()
 
 const CartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const addProductToCart = (product) => {
         if (!cartProducts.some(el => el.id == product.id)){
             setCartProducts([...cartProducts, product])
+            setTotalPrice(totalPrice + (product.price * product.count))
         }
         else{
             const newCart = cartProducts.map( el => {
@@ -20,6 +22,7 @@ const CartProvider = ({children}) => {
                 return el;
             });
             setCartProducts(newCart);
+            setTotalPrice(totalPrice + (product.price * product.count))
         }
     }
 
@@ -85,7 +88,8 @@ const CartProvider = ({children}) => {
         addProductToCart,
         increaseOneFromCount,
         removeOneFromCount,
-        totalProductsPriceCheckout
+        totalProductsPriceCheckout,
+        totalPrice
     }
 
     return(

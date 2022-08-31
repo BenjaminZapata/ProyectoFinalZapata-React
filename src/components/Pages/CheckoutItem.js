@@ -10,7 +10,7 @@ const CheckoutItem = ({product}) => {
 		const {id, title, price, image, stock, colours, featured, category, subcategory} = product;
 
     return(
-        <article className='checkout__main__list__product' key={product.id}>
+        <article className='checkout__main__list__product'>
           <img src={product.image}/>
           <div className='checkout__main__list__product__info'>
               <p className='checkout__main__list__product__info__title'>{product.title}</p>
@@ -22,7 +22,7 @@ const CheckoutItem = ({product}) => {
           </div>
           <p className='checkout__main__list__product__price'>$ {product.price}</p>
           <ClearIcon className='checkout__main__list__product__icon' onClick={() => removeFromCart(product.id)}/>
-    </article>
+        </article>
     )
 }
 

@@ -154,3 +154,23 @@ p{
         }
     }
 }
+
+.sendOrder{
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+    align-items: center;
+    padding: 1em 0 0 0;
+    input{
+        width: 80%;
+        padding: .2em .5em;
+        text-align: center;
+    }
+    input:focus::placeholder{
+        opacity: 0;
+    }
+    input:last-child{
+        width: 40%;
+        padding: .25em 0;
+    }
+}

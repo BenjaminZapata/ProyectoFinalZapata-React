@@ -28,7 +28,7 @@ function FeaturedItems () {
 
         const itemsCollection = collection(db, "items");
         getDocs(itemsCollection).then((item) => {
-                setListProducts(item.docs.map((item) => ({ id: item.id, ...item.data() })));
+            setListProducts(item.docs.map((item) => ({ id: item.id, ...item.data() })));
         });
     }, []);
 
