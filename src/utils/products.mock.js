@@ -73,7 +73,7 @@ const products = [
         stock: 4,
         colours: '',
         featured: false,
-        category: 'Men',
+        category: 'Hombre',
         subcategory: 'Running'
     }
 ]

@@ -1,0 +1,189 @@
+p{
+  letter-spacing: .025em;
+}
+
+.checkout{
+  display: flex;
+  margin: 0 3em;
+  gap: 2em;
+  .checkout__main{
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    gap: 1em;
+    &__title{
+      font-size: 2.5em;
+    }
+    &__total{
+      span{
+        font-weight: bold;
+        letter-spacing: .05em;
+      }
+    }
+    &__offer{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      width: 90%;
+      align-self: center;
+      margin: 1.5em 0;
+      h2{
+        font-size: 1.125em;
+      }
+    }
+    &__list{
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      &__product{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgba(77, 78, 83, 0.75);
+        img{
+          width: 30%;
+        }
+        &__info{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &__title{
+            text-transform: uppercase;
+            font-size: 1.25em;
+            padding-top: 1em;
+            width: 14ch;
+            &__amount{
+              display: flex;
+              flex-direction: row;
+              border: 1px solid rgba(77, 78, 83, 0.75);
+              width: 6em;
+              justify-content: space-between;
+              align-items: center;
+              height: 2.5em;
+              margin-bottom: 1.5em;
+              padding: 0 .35em;
+              p{
+                padding-bottom: .2em;
+                font-size: 1.25em;
+              }
+              button{
+                border: none;
+                background-color: none;
+                &:active{
+                  background-color: rgb(66, 66, 66);
+                }
+              }
+            }
+          }
+        }
+        &__price{
+          padding-top: 1em;
+          font-size: 1.25em;
+        }
+        &__icon{
+          margin: .5em;
+        }
+      }
+    }
+    &__buyout__button{
+      margin-top: 1em;
+      align-self: start;
+      color: #f8f9fa;
+      border: none;
+      background-color: #0f1112;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1em;
+      width: fit-content;
+      padding: .75em 1.5em;
+      box-shadow: #fff 3px 3px 0 0,#000 3px 3px 0 1px;
+      transition: .075s all linear;
+      display: flex;
+      align-items: center;
+      gap: .25em;
+      a{
+        color: white;
+      }
+      &:active{
+        transform: translate(4px, 4px);
+        box-shadow: #fff 0px 0px 0 0,#000 .5px .5px 0 1px;
+      }
+    }
+  }
+  .checkout__aside{
+    width: 35%;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    &__buyout__button{
+      align-self: center;
+      color: #f8f9fa;
+      border: none;
+      background-color: #0f1112;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1em;
+      width: 90%;
+      padding: 1em 1.5em;
+      box-shadow: #fff 3px 3px 0 0,#000 3px 3px 0 1px;
+      transition: .075s all linear;
+      display: flex;
+      align-items: center;
+      gap: .25em;
+      &:active{
+        transform: translate(4px, 4px);
+        box-shadow: #fff 0px 0px 0 0,#000 .5px .5px 0 1px;
+      }
+    }
+    &__resume{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: 2em 0;
+      width: 80%;
+      align-self: center;
+      h2{
+        font-size: 1.25em;
+      }
+      section{
+        display: flex;
+        justify-content: space-between;
+        p{
+          font-weight: 500;
+        }
+      }
+    }
+    input{
+      width: 90%;
+      height: 3.5em;
+      align-self: center;
+      border: 1px solid rgba(54, 54, 54, .5);
+      padding: 0 1em;
+      letter-spacing: .025em;
+      &:focus::placeholder{
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.sendOrder{
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+  align-items: center;
+  padding: 1em 0 0 0;
+  input{
+    width: 80%;
+    padding: .2em .5em;
+    text-align: center;
+  }
+  input:focus::placeholder{
+    opacity: 0;
+  }
+  input:last-child{
+    width: 40%;
+    padding: .25em 0;
+  }
+}
